@@ -1,0 +1,132 @@
+/*Hero section */
+.hero_section {
+    position: relative;
+    background-image: url(../assets/img1.jpg); 
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    background-size: cover;
+    background-attachment: fixed;
+    padding-top:165px;
+    height:700px;
+    padding-bottom: 90px;
+    width: 100%;
+    
+    box-shadow:  0 1px 20px rgba(0, 0, 0, 0.3);
+ 
+
+}
+
+.search_bar{
+    width: 50% !important;;
+}
+
+
+.wrapper_start{
+    position: fixed;
+    z-index: 1000;
+    top:120px;
+    left:7px;
+    background-color: rgb(138, 0, 219);
+    color: gold;
+    border-radius: 3px !important;
+    padding: 4px 11px;
+    margin-top: 2px;
+    box-shadow: 0 4px 8px 0 rgba(138, 43, 226, 0.2);
+    cursor: pointer;
+    
+}
+
+.wrapper_start .bi-arrow-right {
+    font-weight: bolder !important; 
+    font-size: 1.324rem;
+  }
+.page_text{
+    margin-top: 24px;
+}
+.page_text h1{
+    color: #ca6414;
+    font-size: 3.3rem;
+    margin-bottom: -24px;
+    padding-top: 75px;
+    font-family: cursive;
+    line-height: 1.2rem;
+    text-align: center;
+    transform-origin: top left;
+    transform: rotate(-5deg);
+    font-weight: 600;
+    
+    
+}
+.page_text h2{
+    color: #e1fcd3;
+    font-size: 5.5rem;
+    padding: 4px;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: -10px;
+    
+ }
+ .page_text h3{
+    color: #e11212;
+    font-size: 2.8rem;
+    padding: 4px;
+    text-align: center;
+    ;
+    
+ }
+ .button-1{
+    margin-top: 47px;
+ }
+ .button-1 a{
+     text-decoration: none;
+ }
+ .button-1 .order_now{
+    color: var(--light-black);
+     background: linear-gradient(135deg, rgba(255, 215, 0, 0.7) 0%, rgba(255, 255, 255, 0) 100%), #ffd700;
+    border-radius: 7px;
+    padding: 15px 38px;
+    border: 2px solid linear-gradient(135deg, rgba(255, 215, 0, 0.7) 0%, rgba(255, 255, 255, 0) 100%), #ffd700;;
+ }
+ .button-1 .order_now:hover,
+ .button-1 .order_now:focus {
+    border: 1px solid white;
+      color: white;
+      background: transparent;
+      
+    }
+.headphone{
+    width:681px;
+
+}
+@media (max-width:767px){
+    .hero_section .content-1 {
+        flex-direction: column-reverse; /* Change the direction of flexbox */
+         
+      }
+      .page_text h1{
+        font-size: 2.3rem;
+    }
+    .page_text h2{
+        font-size: 3.7rem;
+     }
+     .page_text h3{
+        font-size: 1.7rem;
+     }
+      .page_text h1{
+     text-align: center;
+     padding-top:0px;
+    }
+    .hero_section{
+        height: auto;
+    }
+}
+@media (min-width:768px) and (max-width:991.5px){   
+        .page_text h1{
+           padding-top: 0px;
+        }
+        .hero_section .container {
+            max-width: 865px;
+        }   
+}
+
