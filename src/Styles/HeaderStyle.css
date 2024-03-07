@@ -101,12 +101,31 @@ header .search_bar button {
   border-color: white;
   opacity:0.8;
 }
-
-@media (max-width:767px) {
+header .search_bar1{
+     position: absolute;
+     top:80px;
+     z-index: 1000;
+     width:90%;
+}
+header .search_bar1 button {
+  width:65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  border-color: white;
+  opacity:0.8;
+}
+@media (min-width:767px){
+  header .search_bar1{
+    display: none;
+  }
+}
+@media (max-width:767.9px) {
   header .search_bar {
     margin-left: 1px;
     margin-right: 2px;
-    
+    display: none;
   }
   
 }

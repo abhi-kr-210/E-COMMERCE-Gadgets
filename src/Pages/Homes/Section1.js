@@ -7,10 +7,10 @@ function Section1() {
 
 
 
-
   return (
     <section className='hero_section'>
       <Container >
+
         <Row className='justify-content-center '>
           
           <Col lg={12} sm={12} xs={12} className='d-flex justify-content-between content-1'>

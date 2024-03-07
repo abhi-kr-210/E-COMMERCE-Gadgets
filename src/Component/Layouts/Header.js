@@ -12,6 +12,8 @@ const handlesticky=()=>{
 windowScroll > 100 ? setnav(true) : setnav(false);
 }
 window.addEventListener("scroll", handlesticky);
+// for hiding search bar
+
   return (
     <div>
     <header className='header_section'>
@@ -25,7 +27,7 @@ window.addEventListener("scroll", handlesticky);
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav tog_col" />
   
-      <form action="#" className='search_bar '>
+      <form action="#" className='search_bar ' id="myDiv">
       <div className="input-group ">
         <input type="text" class="form-control rounded-0" placeholder="Search Your Products"/>
         <div className="input-group-append search_bar_button_box">
@@ -37,12 +39,12 @@ window.addEventListener("scroll", handlesticky);
     </form>
       <Navbar.Collapse id="responsive-navbar-nav">
 
-        <Nav className="ms-auto" >
+        <Nav className="ms-auto mt-2" >
           <Nav.Link as={Link} to="/" >HOME</Nav.Link>    
           <Nav.Link as={Link} to="/shop">SHOP</Nav.Link>         
           <Nav.Link as={Link} to="/contact">CONTACT</Nav.Link>
           <Nav.Link as={Link} to="/">
-          <div className="cart">
+          <div className="cart mt-1">
             <i className="bi bi-cart"></i>
             <em className='roundpoint'>2</em>
           </div>
@@ -55,7 +57,18 @@ window.addEventListener("scroll", handlesticky);
 
     </Container>
   </Navbar>
-    
+<div className='search_bar1_container d-flex justify-content-center '>
+<form action="#" className='search_bar1 ms-1 me-1' >
+<div className="input-group ">
+  <input type="text" class="form-control rounded-0" placeholder="Search Your Products"/>
+  <div className="input-group-append search_bar_button_box">
+    <button class="btn btn-primary rounded-0" type="submit">
+    <i className="bi bi-search"></i>
+    </button>
+  </div>
+</div>
+</form>
+</div>
     </header>
    
     </div>
@@ -63,3 +76,21 @@ window.addEventListener("scroll", handlesticky);
 }
 
 export default Header
+
+// function toggleDivVisibility() {
+//   var screenWidth = window.innerWidth;
+//   var myDiv = document.getElementById("myDiv");
+  
+//   if (screenWidth > 767) {
+//       myDiv.style.display = "block";
+//   } else {
+//       myDiv.style.display = "none";
+//   }
+//   console.log(myDiv.style.display)
+// }
+
+// // Call the function when the page loads
+// window.onload = toggleDivVisibility;
+
+// // Add an event listener for the resize event
+// window.addEventListener('resize', toggleDivVisibility);
