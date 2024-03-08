@@ -1,6 +1,9 @@
 import React  from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
+import { Col, Container, Row ,Carousel} from 'react-bootstrap';
 import img1 from "../../assets/headp.png"
+import img2 from "../../assets/headp2.png"
+import img3 from "../../assets/headp3.png"
+import img4 from "../../assets/headp4.png"
 import { Link } from 'react-router-dom';
 
 function Section1() {
@@ -23,7 +26,46 @@ function Section1() {
              </div>
           </div>
           <div >
-            <img src={img1} className="img-fluid headphone " alt="Hero" />
+          <Carousel >
+          <Carousel.Item >
+          <div className>
+          <img src={img1} className="img-fluid headphone " alt="Hero" />
+          </div>
+            <Carousel.Caption>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item >
+          <div className>
+          <img src={img1} className="img-fluid headphone " alt="Hero" />
+          </div>
+            <Carousel.Caption>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item >
+          <div className>
+          <img src={img2} className="img-fluid headphone " alt="Hero" />
+          </div>
+            <Carousel.Caption>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item >
+          <div className>
+          <img src={img3} className="img-fluid headphone " alt="Hero" />
+          </div>
+            <Carousel.Caption>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item >
+          <div className>
+          <img src={img4} className="img-fluid headphone " alt="Hero" />
+          </div>
+            <Carousel.Caption>
+            </Carousel.Caption>
+          </Carousel.Item>
+        </Carousel>   
+
+
+           
           </div>
         </Col>
 

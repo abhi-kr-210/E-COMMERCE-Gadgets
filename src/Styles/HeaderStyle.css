@@ -116,6 +116,12 @@ header .search_bar1 button {
   border-color: white;
   opacity:0.8;
 }
+@media (min-width:589px) and (max-width:767px){
+  header .search_bar1{
+    width:80% ;
+  }
+}
+
 @media (min-width:767px){
   header .search_bar1{
     display: none;
@@ -129,6 +135,7 @@ header .search_bar1 button {
   }
   
 }
+
 @media(max-width:240px){
   header .search_bar input::placeholder {
     font-size: 0.8rem;
