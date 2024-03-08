@@ -16,7 +16,7 @@ function Section1() {
 
         <Row className='justify-content-center '>
           
-          <Col lg={12} sm={12} xs={12} className='d-flex justify-content-between content-1'>
+          <Col lg={12} sm={12} xs={12} className='d-flex justify-content-between content-1 '>
           <div className='page_text'>
             <h1>Exclusives</h1>
             <h2>Headphone</h2>
@@ -25,48 +25,46 @@ function Section1() {
              <Link to="/" className="order_now">Order Now</Link>
              </div>
           </div>
+       <div >
+          <Carousel  controls={false} className='headphone_carousal'>
+          <Carousel.Item >
+          <div  >
+          <img src={img1} className="img-fluid headphone " alt="Hero" />
+          </div>
+            <Carousel.Caption>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item >
           <div >
-          <Carousel >
-          <Carousel.Item >
-          <div className>
           <img src={img1} className="img-fluid headphone " alt="Hero" />
           </div>
             <Carousel.Caption>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item >
-          <div className>
-          <img src={img1} className="img-fluid headphone " alt="Hero" />
-          </div>
-            <Carousel.Caption>
-            </Carousel.Caption>
-          </Carousel.Item>
-          <Carousel.Item >
-          <div className>
+          <div >
           <img src={img2} className="img-fluid headphone " alt="Hero" />
           </div>
             <Carousel.Caption>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item >
-          <div className>
+          <div >
           <img src={img3} className="img-fluid headphone " alt="Hero" />
           </div>
             <Carousel.Caption>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item >
-          <div className>
+          <div >
           <img src={img4} className="img-fluid headphone " alt="Hero" />
           </div>
             <Carousel.Caption>
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>   
-
-
            
-          </div>
+        </div>
         </Col>
 
         </Row>

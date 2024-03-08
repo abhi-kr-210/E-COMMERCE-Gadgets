@@ -95,9 +95,17 @@
       background: transparent;
       
     }
-.headphone{
-    width:681px;
 
+.headphone{
+    width:683px;
+
+}
+.headphone_carousal{
+    max-width:683px;
+  
+}
+.hero_section .carousel-indicators {
+    display: none;
 }
 @media (max-width:767px){
     .hero_section .content-1 {
