@@ -116,6 +116,9 @@ header .search_bar1 button {
   border-color: white;
   opacity:0.8;
 }
+.cart{
+  color:white;
+}
 @media (min-width:589px) and (max-width:767px){
   header .search_bar1{
     width:80% ;

@@ -10,8 +10,7 @@
     padding-top:165px;
     height:700px;
     padding-bottom: 90px;
-    width: 100%;
-    
+    width: 100%;   
     box-shadow:  0 1px 20px rgba(0, 0, 0, 0.3);
  
 
@@ -107,6 +106,81 @@
 .hero_section .carousel-indicators {
     display: none;
 }
+/* Section 2 filter box and card*/
+.product_page{
+   
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url(../assets/back_img.jpg); 
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    background-size: cover;
+}
+.filter_box{
+    background: linear-gradient(135deg, rgb(42 5 5 / 70%) 0%, rgba(255, 255, 255, 0) 100%), #d4880c;
+    text-align: center;
+   padding:4px;
+    overflow: hidden;
+}
+.filter_box a{
+    text-decoration: none;
+    color: aliceblue;
+    line-height: 1;
+    margin-left: 3px;
+    margin-right: 3px;
+    text-shadow: 2px 2px 2px black;
+}
+.arrow{
+    content:"";
+    background-color: aliceblue;
+   
+    width: 30rem; /* Limit maximum width */
+    height: 3px;
+   
+}
+.arrow_container1{
+    margin-left: 3px;   
+}
+.arrow_container2{
+    margin-right: 3px; 
+}
+.filter_menu {
+    background-color: #fbdca2a1;
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 14px;
+    box-shadow: 0px 8px 10px -5px black;
+    opacity: 0; /* Initially set opacity to 0 */
+    animation: fadeIn 2s ease forwards; /* Apply fadeIn animation */
+   
+}
+.card_box_design .card{
+    box-shadow: 0px 0px 10px rgba(141, 140, 140, 0.328); /* Light black box shadow */
+    border:1px solid black;
+}
+
+.filter_menu a{
+    text-decoration: none;
+    color:#201102;
+}
+.card_image_hover{
+    cursor: pointer;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Start with opacity 0 */
+    }
+    to {
+        opacity: 1; /* End with opacity 1 */
+    }
+}
+@keyframes fadeOut {
+    from {
+        opacity: 1; /* Start with opacity 0 */
+    }
+    to {
+        opacity: 0; /* End with opacity 1 */
+    }
+}
 @media (max-width:767px){
     .hero_section .content-1 {
         flex-direction: column-reverse; /* Change the direction of flexbox */
@@ -129,6 +203,43 @@
         height: auto;
     }
 }
+/* section 3 ad section */
+.ad_section .ads_box{
+    background: url("../assets/ad_img_back.jpg") no-repeat center right;
+    background-size: cover;
+    width:100%;
+
+   color: white;
+  border-radius: 6px;
+  padding-bottom: 2px;
+}
+.ad_section .ads_box h1{
+    font-weight: 400;
+    text-shadow: 2px 2px 2px black;
+    margin-left: 15px;
+}
+.ad_section .ads_box h2{
+    margin-left: 75px;
+    color: #47acee;
+    font-weight: 300px;
+    text-transform: none;
+}
+.ad_section .ads_box h5{
+    margin-left: 75px;
+    color: #619cc3;
+    text-transform: none;
+}
+.earbud_img{
+   height:100% !important;
+    width:100% !important;  
+}
+.earbud_img_div{
+
+    width: 183px;
+    height: 122px;
+    position: relative;
+    left: 66px;
+}
 @media (min-width:768px) and (max-width:991.5px){   
         .page_text h1{
            padding-top: 0px;
@@ -137,4 +248,52 @@
             max-width: 865px;
         }   
 }
+/* filterbox*/
+@media (max-width:950px){
+    
+.arrow{
+    width: 20rem; /* Limit maximum width */   
+}
+}
+@media (max-width:670px){
+    
+    .arrow{
+        width: 15rem; /* Limit maximum width */   
+    }
+}
+@media (max-width:500px){
+    
+    .arrow{
+        width: 100px; /* Limit maximum width */   
+    }
+}
+/* ad section section 3*/
+@media (max-width:569px){
 
+
+     .ad_section .ads_box{
+        height:243px;
+     }
+}
+@media (max-width:767px){
+    .ad_section .ads_box h1{
+        margin-left: 5px;
+    }
+    .ad_section .ads_box h2{
+        margin-left: 5px;
+        font-size: 1.4rem;
+    }
+    .ad_section .ads_box h5{
+        margin-left: 5px;
+        
+    }
+
+}
+
+@media (max-width:475px){
+
+  
+.earbud_img_div{
+    left: 0px;
+}
+}

@@ -3,22 +3,16 @@ import { Navbar,Nav,Container } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import img1 from  "../../assets/brand_logo.png"
 import "../../Styles/HeaderStyle.css"
-function Header() {
+function Header1() {
   const [nav,setnav]=useState(false);
-const handlesticky=()=>{
-  const windowScroll =
-  document?.documentElement?.scrollTop;
 
-windowScroll > 100 ? setnav(true) : setnav(false);
-}
-window.addEventListener("scroll", handlesticky);
 // for hiding search bar
 
   return (
     <div>
     <header className='header_section'>
    
-    <Navbar collapseOnSelect expand="lg" className={`  ${nav === true ? "sticky" : ""}`} >
+    <Navbar collapseOnSelect expand="lg" className= "sticky"  >
     <Container className='d-flex justify-content-between'>
       <Navbar.Brand href="#home">
         <Link to="/" className="logo">
@@ -75,7 +69,7 @@ window.addEventListener("scroll", handlesticky);
   )
 }
 
-export default Header
+export default Header1
 
 // function toggleDivVisibility() {
 //   var screenWidth = window.innerWidth;
