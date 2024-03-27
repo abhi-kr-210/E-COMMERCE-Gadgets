@@ -1,9 +1,10 @@
 import React,{useState} from 'react'
 import { Navbar,Nav,Container } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import img1 from  "../../assets/brand_logo.png"
 import "../../Styles/HeaderStyle.css"
 function Header() {
+  const navigate=useNavigate();
   const [nav,setnav]=useState(false);
 const handlesticky=()=>{
   const windowScroll =
@@ -13,7 +14,12 @@ windowScroll > 100 ? setnav(true) : setnav(false);
 }
 window.addEventListener("scroll", handlesticky);
 // for hiding search bar
-
+//search bar navigation
+const [input,setinput]=useState("");
+const handlesubmit=(e)=>{
+   e.preventDefault();
+   navigate(`/search/${input}`)
+}
   return (
     <div>
     <header className='header_section'>
@@ -27,11 +33,11 @@ window.addEventListener("scroll", handlesticky);
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav tog_col" />
   
-      <form action="#" className='search_bar ' id="myDiv">
+      <form  onSubmit={handlesubmit} className='search_bar ' id="myDiv">
       <div className="input-group ">
-        <input type="text" class="form-control rounded-0" placeholder="Search Your Products"/>
+        <input type="text" value={input} onChange={(e)=>setinput(e.target.value)}class="form-control rounded-0" placeholder="Search Your Products"/>
         <div className="input-group-append search_bar_button_box">
-          <button class="btn btn-primary rounded-0" type="submit">
+          <button  class="btn btn-primary rounded-0" type="submit">
           <i className="bi bi-search"></i>
           </button>
         </div>

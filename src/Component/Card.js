@@ -2,7 +2,7 @@ import React,{useState} from "react";
 import { Col, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Modal from 'react-bootstrap/Modal';
-import Button from 'react-bootstrap/Button';
+
 function Cards({id,category,title,imgSrc,amazonLink,description,price}) {
 
   const [show, setShow] = useState(false);
@@ -11,7 +11,7 @@ function Cards({id,category,title,imgSrc,amazonLink,description,price}) {
   const handleShow = () => setShow(true);
   return (
     
-    <Col key={id} sm={6} lg={4} xl={4} className="mb-4 card_box_design">
+    <Col key={id}  sm={6} lg={4} xl={4} xs={9} className="mb-4 card_box_design">
     <Card className="overflow-hidden">
       <Link to={`/product/${id}`} className="overflow-hidden card_image_hover" >
         <Card.Img variant="top" src={imgSrc} />

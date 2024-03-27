@@ -103,7 +103,7 @@ header .search_bar button {
 }
 header .search_bar1{
      position: absolute;
-     top:80px;
+     top:85px;
      z-index: 1000;
      width:100%;
 }

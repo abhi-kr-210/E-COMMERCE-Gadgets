@@ -83,32 +83,32 @@ const items =  [
     {
 
       id: 10,
-      category: 'Mobile',
+      category: 'mobiles',
       title: "Apple iPhone 15 Pro Max",
       imgSrc: 'https://m.media-amazon.com/images/I/81Os1SDWpcL._SL1500_.jpg',
       amazonLink: 'https://amzn.to/3Pdsh4F',
       description: 'Apple iPhone 15 Pro Max (256GB) -Black Titanium',
-      price: '1,48,900',
+      price: '148900',
     },
     {
 
       id: 11,
-      category: 'Mobile',
+      category: 'mobiles',
       title: "Samsung Galaxy Z Flip5 5G",
       imgSrc: 'https://m.media-amazon.com/images/I/71U+YdsvMPL._SL1500_.jpg',
       amazonLink: 'https://amzn.to/3Pdsh4F',
       description: ' Samsung Galaxy Z Flip5 5G (Graphite, 8GB RAM, 256GB Storage)',
-      price: '99,999',
+      price: '99999',
     },
     {
 
       id: 12,
-      category: 'Mobile',
+      category: 'mobiles',
       title: "Samsung Galaxy S24 Ultra 5G",
       imgSrc: 'https://m.media-amazon.com/images/I/81njZjDqc6L._SL1500_.jpg',
       amazonLink: 'https://amzn.to/3Pdsh4F',
       description: 'Samsung Galaxy S24 Ultra 5G AI Smartphone (Titanium Gray, 12GB, 256GB Storage)',
-      price: '1,29,999',
+      price: '129999',
     },
 
   ]

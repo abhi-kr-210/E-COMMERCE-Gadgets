@@ -203,6 +203,7 @@
         height: auto;
     }
 }
+
 /* section 3 ad section */
 .ad_section .ads_box{
     background: url("../assets/ad_img_back.jpg") no-repeat center right;
@@ -267,6 +268,12 @@
         width: 100px; /* Limit maximum width */   
     }
 }
+@media (max-width:575.8px){
+   .product_page_row {
+      
+       justify-content:center;
+   }
+}
 /* ad section section 3*/
 @media (max-width:569px){
 
@@ -274,6 +281,7 @@
      .ad_section .ads_box{
         height:243px;
      }
+
 }
 @media (max-width:767px){
     .ad_section .ads_box h1{
