@@ -3,7 +3,7 @@ import { Col, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Modal from 'react-bootstrap/Modal';
 import items from "../Pages/Homes/Data";
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Bounce } from 'react-toastify'; 
 function Cards({id,title,imgSrc,description,price,handlecartnumber,carts,setcarts  }) {
@@ -42,7 +42,7 @@ function Cards({id,title,imgSrc,description,price,handlecartnumber,carts,setcart
 { /*      <div className="d-flex align-items-center justify-content-between">
           <div className="item_rating">{}</div>
           <div className="wishlist">
-            <i class="bi bi-heart"></i>
+            <i className="bi bi-heart"></i>
           </div>
   </div> */}
 
@@ -55,7 +55,7 @@ function Cards({id,title,imgSrc,description,price,handlecartnumber,carts,setcart
           </div>
           <div className="btn btn-warning add_to_card">
             <div  onClick={handlecartid_and_handlecartnumber} className="text-decoration-none" style={{ color: "black" }} >
-              <i class="bi bi-bag me-2"></i>
+              <i className="bi bi-bag me-2"></i>
               Add To Cart
 
             </div>

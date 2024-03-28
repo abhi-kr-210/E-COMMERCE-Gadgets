@@ -30,7 +30,7 @@ const handlesubmit=(e)=>{
    
     <Navbar collapseOnSelect expand="lg" className={`  ${nav === true ? "sticky" : ""}`} >
     <Container className='d-flex justify-content-between'>
-      <Navbar.Brand href="#home">
+      <Navbar.Brand >
         <Link to="/" className="logo">
           <img src={img1} alt="logo" className='img-fluid logo_img' />
         </Link>
@@ -39,9 +39,9 @@ const handlesubmit=(e)=>{
   
       <form  onSubmit={handlesubmit} className='search_bar ' id="myDiv">
       <div className="input-group ">
-        <input type="text" value={input} onChange={(e)=>setinput(e.target.value)}class="form-control rounded-0" placeholder="Search Your Products"/>
+        <input type="text" value={input} onChange={(e)=>setinput(e.target.value)} className="form-control rounded-0" placeholder="Search Your Products"/>
         <div className="input-group-append search_bar_button_box">
-          <button  class="btn btn-primary rounded-0" type="submit">
+          <button  className="btn btn-primary rounded-0" type="submit">
           <i className="bi bi-search"></i>
           </button>
         </div>
@@ -49,7 +49,7 @@ const handlesubmit=(e)=>{
     </form>
       <Navbar.Collapse id="responsive-navbar-nav">
 
-        <Nav className="ms-auto mt-2" >
+        <Nav className="ms-auto mt-3" >
           <Nav.Link as={Link} to="/" >HOME</Nav.Link>    
           <Nav.Link as={Link} to="/shop">SHOP</Nav.Link>         
           <Nav.Link as={Link} to="/contact">CONTACT</Nav.Link>
@@ -68,11 +68,11 @@ const handlesubmit=(e)=>{
     </Container>
   </Navbar>
 <div className='search_bar1_container d-flex justify-content-center '>
-<form action="#" className='search_bar1 ms-1 me-1' >
+<form onSubmit={handlesubmit}  className='search_bar1 ms-1 me-1' >
 <div className="input-group ">
-  <input type="text" class="form-control rounded-0" placeholder="Search Your Products"/>
+  <input type="text" value={input} onChange={(e)=>setinput(e.target.value)} className="form-control rounded-0" placeholder="Search Your Products"/>
   <div className="input-group-append search_bar_button_box">
-    <button class="btn btn-primary rounded-0" type="submit">
+    <button className="btn btn-primary rounded-0" type="submit">
     <i className="bi bi-search"></i>
     </button>
   </div>

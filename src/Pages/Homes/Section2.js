@@ -3,9 +3,9 @@ import { Col, Container, Row } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import Cards from '../../Component/Cards';
 import items from '../../Pages/Homes/Data';
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { Bounce } from 'react-toastify'; 
+
 function Section2({carts, setcarts ,handlecartnumber}) {
   const [filter_block ,setfilter_block]=useState(false);
   const handlefilter=()=>{

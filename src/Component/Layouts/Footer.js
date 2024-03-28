@@ -62,16 +62,16 @@ function Footer() {
               </div>
               <div className='d-flex mb=4  social_media'>
                 <Link to="/">
-                  <i class="bi bi-facebook"></i>
+                  <i className="bi bi-facebook"></i>
                 </Link>
                 <Link to="/">
-                  <i class="bi bi-twitter"></i>
+                  <i className="bi bi-twitter"></i>
                 </Link>
                 <Link to="/">
-                  <i class="bi bi-instagram"></i>
+                  <i className="bi bi-instagram"></i>
                 </Link>
                 <Link to="/">
-                  <i class="bi bi-youtube"></i>
+                  <i className="bi bi-youtube"></i>
                 </Link>
               </div>
             </Col>
@@ -108,12 +108,12 @@ function Footer() {
             </Col>
 
             <Col lg={3} className='mb-4'>
-              <h3 classNmae="mb-4">NEWSLETTER</h3>
+              <h3 className="mb-4">NEWSLETTER</h3>
               <p>Amet justo diam dolor rebum lorem sit stet sea justo kasd</p>
               <form action="#">
                 <div className="input-group">
                   <input type="text" className="form-control border-white p-3 footer_input" placeholder="Your Email" />
-                  <button class="btn btn_footer" type="submit">Sign Up</button>
+                  <button className="btn btn_footer" type="submit">Sign Up</button>
                 </div>
               </form>
             </Col>
@@ -151,13 +151,13 @@ function Footer() {
        {/* Sroll To Top */}
        {isVisible && (
         <div className="scroll_top" onClick={scrollTop}>
-          <i class="bi bi-arrow-up"></i>
+          <i className="bi bi-arrow-up"></i>
         </div>
       )}
              {/* Sroll To down*/}
            
               <div className="scroll_down" onClick={scrolldown}>
-                <i class="bi bi-arrow-down"></i>
+                <i className="bi bi-arrow-down"></i>
               </div>
             
   

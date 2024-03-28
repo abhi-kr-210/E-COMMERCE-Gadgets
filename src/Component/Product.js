@@ -6,9 +6,9 @@ import items from '../Pages/Homes/Data';
 import Header from './Layouts/Header';
 import Footer from './Layouts/Footer';
 import "../Styles/ProductStyle.css"
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { Bounce } from 'react-toastify'; 
+
 function Product({carts, setcarts ,cartnumber,handlecartnumber}) {
 
     const location=useLocation();

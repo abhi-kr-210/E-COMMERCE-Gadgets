@@ -1,6 +1,6 @@
 import React,{useState,useEffect} from 'react'
 // to fetch id we will use useparam
-import { Link, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import Footer from './Layouts/Footer'
 import Header from './Layouts/Header';
 import "../Styles/ProductDetailStyle.css"
@@ -76,10 +76,10 @@ function ProductDetail({carts,setcarts ,cartnumber,handlecartnumber}) {
             <h5 className="mb-0">{product.price} {" ₹"}</h5>
           </div>
           <div className="btn btn-warning add_to_card">
-            <Link onClick={handlecartid_and_handlecartnumber} className="text-decoration-none" style={{ color: "black" }} >
-              <i class="bi bi-bag me-2"></i>
+            <div onClick={handlecartid_and_handlecartnumber} className="text-decoration-none" style={{ color: "black" }} >
+              <i className="bi bi-bag me-2"></i>
               Add To Cart
-            </Link>
+            </div>
           </div>
         </div>
         </div>

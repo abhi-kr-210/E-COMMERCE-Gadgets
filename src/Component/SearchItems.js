@@ -6,9 +6,9 @@ import items from '../Pages/Homes/Data'
 import Cards from './Cards'
 import { Container, Row } from 'react-bootstrap'
 import "../Styles/SearchitemsStyle.css"
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { Bounce } from 'react-toastify'; 
+
 function SearchItems({carts,setcarts ,cartnumber,handlecartnumber}) {
   const {term}=useParams();
   const [filterdata,setfilterdata]=useState([]);
