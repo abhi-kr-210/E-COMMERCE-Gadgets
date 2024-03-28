@@ -6,12 +6,31 @@ import Header from './Layouts/Header';
 import "../Styles/ProductDetailStyle.css"
 import { Col, Container, Row } from 'react-bootstrap';
 import items from '../Pages/Homes/Data';
-import Card from '../Component/Card';
-function ProductDetail() {
+import Cards from './Cards';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { Bounce } from 'react-toastify'; 
+function ProductDetail({carts,setcarts ,cartnumber,handlecartnumber}) {
     const { id } = useParams();
     const [product, setProduct] = useState({});
     const [relatedproduct,setrelatedproduct]=useState([]);
-
+    const handlecartid_and_handlecartnumber = () => {
+      handlecartnumber();
+    const element=items.filter((pr)=>pr.id==id)
+    setcarts([...carts,...element]); //use spread operator for adding as array of object 
+      
+    toast.success('Item added on cart', {
+      position: "top-right",
+      autoClose: 1500,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+      transition: Bounce,
+      });
+  }
     useEffect(() => {
         const filterProduct=items.filter((product)=>product.id==id)
         //console.log(filterProduct)
@@ -22,8 +41,22 @@ function ProductDetail() {
     },[id,product.category])
   return (
     <div>
-     <Header/> 
+    
+     <Header cartnumber={cartnumber}/> 
+     <ToastContainer 
+     position="top-right"
+     autoClose={1500}
+     hideProgressBar={false}
+     newestOnTop={false}
+     closeOnClick
+     rtl={false}
+     pauseOnFocusLoss
+     draggable
+     pauseOnHover
+     theme="dark"
+     />
      <div className='details'>
+     
       <Container>
       <Row>
       <Col lg={6}className='mb-1'>
@@ -43,7 +76,7 @@ function ProductDetail() {
             <h5 className="mb-0">{product.price} {" ₹"}</h5>
           </div>
           <div className="btn btn-warning add_to_card">
-            <Link to="/" className="text-decoration-none" style={{ color: "black" }} >
+            <Link onClick={handlecartid_and_handlecartnumber} className="text-decoration-none" style={{ color: "black" }} >
               <i class="bi bi-bag me-2"></i>
               Add To Cart
             </Link>
@@ -60,17 +93,20 @@ function ProductDetail() {
      <Container>
       
      {/* related product */}     
-     <Row>
+     <Row className='product_page_row '>
      {relatedproduct.map((carddata,index)=>(
-       <Card
+       <Cards
        key={index}
        id={carddata.id}
-       category={carddata.category}
+       //category={carddata.category}
        title={carddata.title}
        imgSrc={carddata.imgSrc}
-       amazonLink={carddata.amazonLink}
+       //amazonLink={carddata.amazonLink}
        description={carddata.description}
        price={carddata.price}
+       handlecartnumber={handlecartnumber}
+       carts={carts} 
+       setcarts={setcarts} 
        />
      ))}
      </Row>

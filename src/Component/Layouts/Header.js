@@ -3,7 +3,11 @@ import { Navbar,Nav,Container } from 'react-bootstrap'
 import { Link, useNavigate } from 'react-router-dom'
 import img1 from  "../../assets/brand_logo.png"
 import "../../Styles/HeaderStyle.css"
-function Header() {
+
+
+function Header({cartnumber}) {
+
+//console.log(cartnumber,"lpop")
   const navigate=useNavigate();
   const [nav,setnav]=useState(false);
 const handlesticky=()=>{
@@ -50,9 +54,9 @@ const handlesubmit=(e)=>{
           <Nav.Link as={Link} to="/shop">SHOP</Nav.Link>         
           <Nav.Link as={Link} to="/contact">CONTACT</Nav.Link>
           <Nav.Link as={Link} to="/">
-          <Link to="/cart" className="cart mt-1">
+          <Link to="/cart"  className="cart mt-1">
             <i className="bi bi-cart"></i>
-            <em className='roundpoint'>2</em>
+            <em className='roundpoint'>{cartnumber}</em>
           </Link>
         </Nav.Link>
  

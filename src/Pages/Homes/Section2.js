@@ -1,9 +1,12 @@
 import React,{useState} from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
-import Card from '../../Component/Card';
+import Cards from '../../Component/Cards';
 import items from '../../Pages/Homes/Data';
-function Section2() {
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { Bounce } from 'react-toastify'; 
+function Section2({carts, setcarts ,handlecartnumber}) {
   const [filter_block ,setfilter_block]=useState(false);
   const handlefilter=()=>{
     setfilter_block(!filter_block)
@@ -12,7 +15,19 @@ function Section2() {
   return (
    
     <div>
+    <ToastContainer
+    position="top-right"
+    autoClose={1500}
+    hideProgressBar={false}
+    newestOnTop={false}
+    closeOnClick
+    rtl={false}
+    pauseOnFocusLoss
+    draggable
+    pauseOnHover
+    theme="dark"
 
+    />
     <section  className='product_page'>
      <div className='filter_box d-flex align-items-center justify-content-center mt-1 '>
       <div className='arrow_container1'>
@@ -60,15 +75,18 @@ function Section2() {
     <Container>
     <Row className='mt-5 product_page_row'>
     {items.map((carddata,index)=>(
-      <Card
+      <Cards
       key={index}
       id={carddata.id}
-      category={carddata.category}
+      //category={carddata.category}
       title={carddata.title}
       imgSrc={carddata.imgSrc}
-      amazonLink={carddata.amazonLink}
+      //amazonLink={carddata.amazonLink}
       description={carddata.description}
       price={carddata.price}
+      handlecartnumber={handlecartnumber}
+      carts={carts} 
+      setcarts={setcarts} 
       />
     ))}
 

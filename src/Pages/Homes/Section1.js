@@ -8,8 +8,6 @@ import { Link } from 'react-router-dom';
 
 function Section1() {
 
-
-
   return (
     <section className='hero_section'>
       <Container >
