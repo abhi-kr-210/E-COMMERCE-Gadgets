@@ -7,7 +7,7 @@ import {ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Bounce } from 'react-toastify';
 import items from '../Pages/Homes/Data'
- 
+import "../Styles/WishlistStyle.css"
 function Wishlist({setwish,setcartnumber,wish,cartnumber,carts,setcarts,handlecartnumber}) {
     const handle_clear_wishlist=()=>{
         setwish([]);
@@ -68,10 +68,10 @@ function Wishlist({setwish,setcartnumber,wish,cartnumber,carts,setcarts,handleca
       <h6 className='text-center' style={{textTransform:"none",fontFamily:"sans-serif"}}>{cart.description}</h6>
       <div className="d-flex align-items-center justify-content-between">
         <div className="menu_price btn btn-primary">
-        <h5 className="mb-1">{cart.price} {" ₹"}</h5>
+        <h5 className="mb-1 wishlisttext">{cart.price} {" ₹"}</h5>
         </div>
          <div onClick={()=>handlecartid_and_handlecartnumber(cart.id) } className="btn btn-warning add_to_card">
-         <h5 className="mb-1">Add To Cart</h5>
+         <h5 className="mb-1 wishlisttext">Add To Cart</h5>
        </div>
       </div>
       </div>

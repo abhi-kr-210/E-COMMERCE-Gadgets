@@ -1,4 +1,6 @@
-.wishlist i{
-   
-    color:red;
+
+@media(max-width:370px){
+    .wishlisttext {
+        font-size: 0.93rem!important;
+    }
 }
