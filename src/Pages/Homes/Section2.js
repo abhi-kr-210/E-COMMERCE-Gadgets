@@ -6,7 +6,7 @@ import items from '../../Pages/Homes/Data';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-function Section2({carts, setcarts ,handlecartnumber}) {
+function Section2({carts, setcarts ,handlecartnumber,wish, setwish}) {
   const [filter_block ,setfilter_block]=useState(false);
   const handlefilter=()=>{
     setfilter_block(!filter_block)
@@ -87,6 +87,10 @@ function Section2({carts, setcarts ,handlecartnumber}) {
       handlecartnumber={handlecartnumber}
       carts={carts} 
       setcarts={setcarts} 
+      rating={carddata.rating}
+      wish={wish} 
+      setwish={setwish}
+
       />
     ))}
 

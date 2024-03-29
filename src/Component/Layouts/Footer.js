@@ -37,7 +37,7 @@ function Footer() {
           <Row className="justify-content-center  ">
             <Col sm={6} lg={3} className="mb-4 footer_box mr-3">
               <div className='footer_box_inside'>
-                <h2>Treat & Tiny Bakery</h2>
+                <h2>Lorem diam Vbhks </h2>
                 <p>Lorem diam sit erat dolor elitr et, diam lorem justo labore amet clita labore stet
                   eos magna sit. Elitr dolor eirmod duo tempor lorem, elitr clita ipsum sea. Nonumy rebum
                   et takimata ea takimata amet gubergren, erat rebum magna lorem stet eos. Diam amet

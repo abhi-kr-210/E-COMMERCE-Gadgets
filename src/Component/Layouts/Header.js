@@ -22,13 +22,16 @@ window.addEventListener("scroll", handlesticky);
 const [input,setinput]=useState("");
 const handlesubmit=(e)=>{
    e.preventDefault();
-   navigate(`/search/${input}`)
+   //input.trim() !== "" checks if the trimmed value of the input is not an empty string  
+   if (input.trim() !== "") {
+    navigate(`/search/${input}`);
+  }
 }
   return (
     <div>
     <header className='header_section'>
    
-    <Navbar collapseOnSelect expand="lg" className={`  ${nav === true ? "sticky" : ""}`} >
+    <Navbar collapseOnSelect expand="lg" className={` ${nav === true ? "sticky" : ""}`} >
     <Container className='d-flex justify-content-between'>
       <Navbar.Brand >
         <Link to="/" className="logo">
@@ -41,7 +44,7 @@ const handlesubmit=(e)=>{
       <div className="input-group ">
         <input type="text" value={input} onChange={(e)=>setinput(e.target.value)} className="form-control rounded-0" placeholder="Search Your Products"/>
         <div className="input-group-append search_bar_button_box">
-          <button  className="btn btn-primary rounded-0" type="submit">
+          <button  className="btn btn-primary rounded-0 " type="submit">
           <i className="bi bi-search"></i>
           </button>
         </div>
@@ -51,10 +54,14 @@ const handlesubmit=(e)=>{
 
         <Nav className="ms-auto mt-3" >
           <Nav.Link as={Link} to="/" >HOME</Nav.Link>    
-          <Nav.Link as={Link} to="/shop">SHOP</Nav.Link>         
-          <Nav.Link as={Link} to="/contact">CONTACT</Nav.Link>
-          <Nav.Link as={Link} to="/">
-          <Link to="/cart"  className="cart mt-1">
+          <Nav.Link as={Link} to="/">SHOP</Nav.Link>         
+          <Nav.Link as={Link} to="/">CONTACT</Nav.Link>
+          <Nav.Link as={Link} >
+          <Link to="/wishlist"  className="cart mt-1 ">
+          <i className="bi bi-heart" />
+         
+        </Link>
+          <Link to="/cart"  className="cart mt-1 mx-3">
             <i className="bi bi-cart"></i>
             <em className='roundpoint'>{cartnumber}</em>
           </Link>

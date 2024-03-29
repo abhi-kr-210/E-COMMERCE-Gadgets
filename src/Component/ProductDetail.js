@@ -10,7 +10,7 @@ import Cards from './Cards';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Bounce } from 'react-toastify'; 
-function ProductDetail({carts,setcarts ,cartnumber,handlecartnumber}) {
+function ProductDetail({carts,setcarts ,cartnumber,handlecartnumber,wish,setwish}) {
     const { id } = useParams();
     const [product, setProduct] = useState({});
     const [relatedproduct,setrelatedproduct]=useState([]);
@@ -107,6 +107,10 @@ function ProductDetail({carts,setcarts ,cartnumber,handlecartnumber}) {
        handlecartnumber={handlecartnumber}
        carts={carts} 
        setcarts={setcarts} 
+       rating={carddata.rating}
+       wish={wish} 
+       setwish={setwish}
+
        />
      ))}
      </Row>

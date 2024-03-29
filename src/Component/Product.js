@@ -9,7 +9,7 @@ import "../Styles/ProductStyle.css"
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-function Product({carts, setcarts ,cartnumber,handlecartnumber}) {
+function Product({carts, setcarts ,cartnumber,handlecartnumber,wish,setwish}) {
 
     const location=useLocation();
     const data= location.state ? location.state.data :"";
@@ -59,6 +59,9 @@ theme="dark"
       handlecartnumber={handlecartnumber}
       carts={carts} 
       setcarts={setcarts} 
+      rating={carddata.rating}
+      wish={wish} 
+      setwish={setwish}
 
       />
     ))}

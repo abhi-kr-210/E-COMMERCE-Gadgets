@@ -9,7 +9,7 @@ import "../Styles/SearchitemsStyle.css"
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-function SearchItems({carts,setcarts ,cartnumber,handlecartnumber}) {
+function SearchItems({carts,setcarts ,cartnumber,handlecartnumber,wish, setwish}) {
   const {term}=useParams();
   const [filterdata,setfilterdata]=useState([]);
   useEffect(() => {
@@ -51,6 +51,10 @@ function SearchItems({carts,setcarts ,cartnumber,handlecartnumber}) {
        handlecartnumber={handlecartnumber}
        carts={carts}
        setcarts={setcarts} 
+       rating={carddata.rating}
+       wish={wish}
+       setwish={setwish}
+
        />
      ))}
  

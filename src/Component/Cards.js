@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React,{useState,useEffect} from "react";
 import { Col, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Modal from 'react-bootstrap/Modal';
@@ -6,10 +6,15 @@ import items from "../Pages/Homes/Data";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Bounce } from 'react-toastify'; 
-function Cards({id,title,imgSrc,description,price,handlecartnumber,carts,setcarts  }) {
-  
+import "../Styles/WishlistStyle.css"
+function Cards({id,title,imgSrc,description,price,handlecartnumber,carts,setcarts ,rating,wish,setwish}) {
+  const [wishlistcolor,setwishlistcolor]=useState(false);
   const [show, setShow] = useState(false);
-
+  useEffect(() => {
+    // Check if the item is already in the wishlist and set its color accordingly
+    const isItemInWishlist = wish.some((item) => item.id === id);
+    setwishlistcolor(isItemInWishlist);
+  }, [id, wish]);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const handlecartid_and_handlecartnumber = () => {
@@ -28,7 +33,35 @@ function Cards({id,title,imgSrc,description,price,handlecartnumber,carts,setcart
       transition: Bounce,
       });
   }
+ const renderRatingIcons=(rating)=>{
+  const icons = [];
+  for (let i = 1; i <= 5; i++) {
+    if(rating>0.5){
+      icons.push(<i key={i} className="bi bi-star-fill" style={{color:"var(--yellow)" ,paddingRight:"5px"}}></i>);
+    }else if(rating>0){
+      icons.push(<i key={"half"} className="bi bi-star-half" style={{color:"var(--yellow)",paddingRight:"5px"}}></i>);
+    }else{
+      icons.push(<i key={`empty${i}`} className="bi bi-star" style={{color:"var(--yellow)",paddingRight:"5px"}}></i>);
+    }
+    rating--;
+  }
+  return icons
+ }
+
  
+ const handlewishlist=()=>{
+  if (wishlistcolor === false) {
+    const element = items.filter((pr) => pr.id === id);
+    setwishlistcolor(true);
+    setwish([...wish, ...element]);
+    console.log(wishlistcolor,{id})
+  } else {
+    const updatedWishList = wish.filter((pr) => pr.id !== id);
+    setwishlistcolor(false);
+    setwish(updatedWishList);
+  }
+  console.log(wishlistcolor,{id})
+ }
   return ( 
     <>
     
@@ -45,7 +78,12 @@ function Cards({id,title,imgSrc,description,price,handlecartnumber,carts,setcart
             <i className="bi bi-heart"></i>
           </div>
   </div> */}
-
+          <div className="d-flex align-items-center justify-content-between mb-3">
+          <div className="item_rating">{renderRatingIcons(rating)}</div>
+          <div onClick={handlewishlist} >            
+            {wishlistcolor ? (<i className="bi bi-heart-fill" style={{color:"red",cursor:"pointer",fontSize:"1.5rem"}}></i> ): <i className="bi bi-heart"  style={{cursor:"pointer",fontSize:"1.5rem"}}></i>}
+          </div>
+        </div>
         <Card.Title className="text-center" style={{ cursor: "pointer" }} onClick={handleShow}>{title}</Card.Title>
         <Card.Text>{}</Card.Text>
 

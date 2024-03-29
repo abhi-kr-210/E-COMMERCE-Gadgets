@@ -241,6 +241,11 @@
     position: relative;
     left: 66px;
 }
+.form-control:focus {
+    border-color: #0967f0;
+    outline: 0;
+    box-shadow:none!important;
+}
 @media (min-width:768px) and (max-width:991.5px){   
         .page_text h1{
            padding-top: 0px;
