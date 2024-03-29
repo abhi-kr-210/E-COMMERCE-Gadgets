@@ -7,7 +7,7 @@ import {ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Bounce } from 'react-toastify';
 import items from '../Pages/Homes/Data'
-import "../Styles/WishlistStyle.css"
+ import "../Styles/WishlistStyle.css"
 function Wishlist({setwish,setcartnumber,wish,cartnumber,carts,setcarts,handlecartnumber}) {
     const handle_clear_wishlist=()=>{
         setwish([]);
@@ -64,7 +64,7 @@ function Wishlist({setwish,setcartnumber,wish,cartnumber,carts,setcarts,handleca
       </Col>
       <Col lg={4} sm={5} xs={6}  xl={4}className='d-flex justify-content-center align-items-center column_2 '>
       <div>
-      <h4 className='text-center'>{cart.title}</h4>
+      <h4 className='text-center '>{cart.title}</h4>
       <h6 className='text-center' style={{textTransform:"none",fontFamily:"sans-serif"}}>{cart.description}</h6>
       <div className="d-flex align-items-center justify-content-between">
         <div className="menu_price btn btn-primary">

@@ -71,20 +71,21 @@ function Cards({id,title,imgSrc,description,price,handlecartnumber,carts,setcart
         <Card.Img variant="top" src={imgSrc} />
         
       </Link>
-      <Card.Body>
+      <Card.Body style={{backgroundColor:"black"}}>
 { /*      <div className="d-flex align-items-center justify-content-between">
           <div className="item_rating">{}</div>
           <div className="wishlist">
             <i className="bi bi-heart"></i>
           </div>
   </div> */}
-          <div className="d-flex align-items-center justify-content-between mb-3">
-          <div className="item_rating">{renderRatingIcons(rating)}</div>
-          <div onClick={handlewishlist} >            
-            {wishlistcolor ? (<i className="bi bi-heart-fill" style={{color:"red",cursor:"pointer",fontSize:"1.5rem"}}></i> ): <i className="bi bi-heart"  style={{cursor:"pointer",fontSize:"1.5rem"}}></i>}
-          </div>
+
+        <Card.Title className="text-center" style={{ cursor: "pointer", color: "white" }} onClick={handleShow}>{title}</Card.Title>
+        <div className="d-flex align-items-center justify-content-between mb-3">
+        <div className="item_rating">{renderRatingIcons(rating)}</div>
+        <div onClick={handlewishlist} style={{color:"white"}} >            
+          {wishlistcolor ? (<i className="bi bi-heart-fill" style={{color:"red",cursor:"pointer",fontSize:"1.5rem"}}></i> ): <i className="bi bi-heart"  style={{cursor:"pointer",fontSize:"1.5rem"}}></i>}
         </div>
-        <Card.Title className="text-center" style={{ cursor: "pointer",textTransform:"Uppercase" }} onClick={handleShow}>{title}</Card.Title>
+      </div>
         <Card.Text>{}</Card.Text>
 
         <div className="d-flex align-items-center justify-content-between">
@@ -101,8 +102,8 @@ function Cards({id,title,imgSrc,description,price,handlecartnumber,carts,setcart
         </div>
       </Card.Body>
     </Card>
-    <Modal show={show} onHide={handleClose}>
-    <Modal.Header closeButton>
+    <Modal show={show} onHide={handleClose} >
+    <Modal.Header closeButton >
       <Modal.Title>{title}</Modal.Title>
     </Modal.Header>
     <Modal.Body>
@@ -110,7 +111,7 @@ function Cards({id,title,imgSrc,description,price,handlecartnumber,carts,setcart
     <img src={imgSrc} className="img-fluid " alt="cardimage" />
     </div>
     </Modal.Body>
-    <Modal.Footer>
+    <Modal.Footer style={{backgroundColor:"black",color:"yellow"}}>
     {description}
     </Modal.Footer>
   </Modal>

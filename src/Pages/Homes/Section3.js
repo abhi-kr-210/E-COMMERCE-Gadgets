@@ -2,6 +2,7 @@ import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import img1 from '../../assets/earbud_add.png';
+import img2 from '../../assets/headphone.png';
 function Section3() {
   return (
     <div>
@@ -9,18 +10,19 @@ function Section3() {
      <Container >
      <Row>
      <Col  lg={8} >
-     <div className='ads_box mb-5  '>
-     <h1>B&nbsp;O&nbsp;U&nbsp;L&nbsp;T&nbsp;</h1>
-      <div className='earbud_img_div'>
-      <img src={img1} className="img-fluid earbud_img" alt="Hero" />
-      </div>
-     <h5>Top Features in True Wireless Earbuds</h5>
+     <div className='ads_box mb-5  d-flex justify-content-between'>
+     <div>
+     <h5>Pemium Sound</h5>
      <h2 className="mb-0">Pro Tips to Find the</h2>
-     <h2 >Right Pair</h2>        
-      
+     <h2 >Right Pair</h2> 
+     </div>       
+      <div>
+      <img src={img2} className="img-fluid " alt="Hero" /> 
+      </div>
      </div>
      
-     </Col>     
+     </Col>
+     
      </Row>
      
      </Container>

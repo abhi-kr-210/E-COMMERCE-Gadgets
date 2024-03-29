@@ -206,11 +206,11 @@
 
 /* section 3 ad section */
 .ad_section .ads_box{
-    background: url("../assets/ad_img_back.jpg") no-repeat center right;
+    background: url("../assets/ad_img_back1.jpeg") no-repeat center right;
     background-size: cover;
     width:100%;
 
-   color: white;
+   color: rgb(164, 255, 229);
   border-radius: 6px;
   padding-bottom: 2px;
 }
@@ -221,13 +221,15 @@
 }
 .ad_section .ads_box h2{
     margin-left: 75px;
-    color: #47acee;
+    color: var(--yellow);
+    text-shadow: 2px 2px 2px black;
     font-weight: 300px;
     text-transform: none;
 }
 .ad_section .ads_box h5{
     margin-left: 75px;
-    color: #619cc3;
+    color: var(--yellow);
+    text-shadow: 2px 2px 2px black;
     text-transform: none;
 }
 .earbud_img{
