@@ -84,7 +84,7 @@ function Cards({id,title,imgSrc,description,price,handlecartnumber,carts,setcart
             {wishlistcolor ? (<i className="bi bi-heart-fill" style={{color:"red",cursor:"pointer",fontSize:"1.5rem"}}></i> ): <i className="bi bi-heart"  style={{cursor:"pointer",fontSize:"1.5rem"}}></i>}
           </div>
         </div>
-        <Card.Title className="text-center" style={{ cursor: "pointer",textTransform:"capitalize" }} onClick={handleShow}>{title}</Card.Title>
+        <Card.Title className="text-center" style={{ cursor: "pointer",textTransform:"Uppercase" }} onClick={handleShow}>{title}</Card.Title>
         <Card.Text>{}</Card.Text>
 
         <div className="d-flex align-items-center justify-content-between">
