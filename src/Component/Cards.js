@@ -79,7 +79,7 @@ function Cards({id,title,imgSrc,description,price,handlecartnumber,carts,setcart
           </div>
   </div> */}
 
-        <Card.Title className="text-center" style={{ cursor: "pointer", color: "white" }} onClick={handleShow}>{title}</Card.Title>
+        <Card.Title className="text-center" style={{ cursor: "pointer", color: "white",textTransform:"uppercase" }} onClick={handleShow}>{title}</Card.Title>
         <div className="d-flex align-items-center justify-content-between mb-3">
         <div className="item_rating">{renderRatingIcons(rating)}</div>
         <div onClick={handlewishlist} style={{color:"white"}} >            
