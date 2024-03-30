@@ -154,7 +154,7 @@
    
 }
 .card_box_design .card{
-    box-shadow: 0px 0px 10px rgba(141, 140, 140, 0.328); /* Light black box shadow */
+    box-shadow: 0px 0px 10px rgba(165, 164, 164, 0.328); /* Light black box shadow */
     border:1px solid black;
 }
 
@@ -206,7 +206,7 @@
 
 /* section 3 ad section */
 .ad_section .ads_box{
-    background: url("../assets/ad_img_back1.jpeg") no-repeat center right;
+    background: url("../assets/ad_img_back1.jpeg") no-repeat center center;
     background-size: cover;
     width:100%;
 
@@ -217,32 +217,32 @@
 .ad_section .ads_box h1{
     font-weight: 400;
     text-shadow: 2px 2px 2px black;
-    margin-left: 15px;
 }
 .ad_section .ads_box h2{
-    margin-left: 75px;
     color: var(--yellow);
     text-shadow: 2px 2px 2px black;
     font-weight: 300px;
     text-transform: none;
 }
-.ad_section .ads_box h5{
-    margin-left: 75px;
+.ad_section .ads_box h3{
+    color:white;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 1px rgb(255, 232, 103);
+    
+}
+.ad_section .ads_box i{
+  color:rgb(252, 39, 252);
+  
+}
+.ad_section .ads_box h6{
     color: var(--yellow);
     text-shadow: 2px 2px 2px black;
     text-transform: none;
+    margin-left: 40px;
 }
-.earbud_img{
-   height:100% !important;
-    width:100% !important;  
-}
-.earbud_img_div{
-
-    width: 183px;
-    height: 122px;
-    position: relative;
-    left: 66px;
-}
+.ad_section .row {
+    padding:15px;
+ }
 .form-control:focus {
     border-color: #0967f0;
     outline: 0;
@@ -282,33 +282,33 @@
    }
 }
 /* ad section section 3*/
-@media (max-width:569px){
-
-
-     .ad_section .ads_box{
-        height:243px;
-     }
-
-}
 @media (max-width:767px){
-    .ad_section .ads_box h1{
-        margin-left: 5px;
+    .ad_section .ads_box h3 {
+       font-size: 1.5rem;
     }
     .ad_section .ads_box h2{
-        margin-left: 5px;
-        font-size: 1.4rem;
+        font-size: 1rem;
     }
-    .ad_section .ads_box h5{
-        margin-left: 5px;
-        
+    .ad_section .ads_box h6{
+        font-size: 0.7rem;
+        margin-left: 20px;
+    }
+
+}
+@media (max-width:580px){
+    .ad_section .row {
+        padding:15px;
+     }
+    .ad_section .ads_box h3 {
+       font-size: 1.3rem;
+    }
+    .ad_section .ads_box h2{
+        font-size: 0.7rem;
+    }
+    .ad_section .ads_box h6{
+        font-size: 0.6rem;
+        margin-left: 10px;
     }
 
 }
 
-@media (max-width:475px){
-
-  
-.earbud_img_div{
-    left: 0px;
-}
-}

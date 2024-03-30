@@ -125,3 +125,6 @@ a {
   background: transparent;
   border-color: rgb(64 28 28 / 93%);
 }
+.modal-dialog {
+  padding: 40px!important;
+}

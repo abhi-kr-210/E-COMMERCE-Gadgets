@@ -9,20 +9,25 @@ function Section3() {
     <section className='ad_section mt-5 mb-5'>
      <Container >
      <Row>
-     <Col  lg={8} >
-     <div className='ads_box mb-5  d-flex justify-content-between'>
-     <div>
-     <h5>Pemium Sound</h5>
-     <h2 className="mb-0">Pro Tips to Find the</h2>
-     <h2 >Right Pair</h2> 
-     </div>       
-      <div>
-      <img src={img2} className="img-fluid " alt="Hero" /> 
-      </div>
-     </div>
+     <div className='ads_box d-flex justify-content-center' >
      
+     <Col  lg={6} xs={5} md={6}className='d-flex justify-content-center align-items-center colun'>
+     <div>
+     <h3>HeadPhone</h3>
+     <h2 className="mb-2"><i class="bi bi-bar-chart">&nbsp;</i>P&nbsp;R&nbsp;E&nbsp;M&nbsp;I&nbsp;M&nbsp;U&nbsp;M &nbsp;&nbsp;&nbsp;S&nbsp;O&nbsp;U&nbsp;N&nbsp;D</h2>
+     <h6 style={{letterSpacing:"1px",marginBottom:"0px",fontFamily:"sans-serif"}}>Surround sound experience</h6> 
+     <h6 style={{letterSpacing:"1px",marginBottom:"0px",fontFamily:"sans-serif"}}>Noise reduction</h6> 
+     <h6 style={{letterSpacing:"1px",marginBottom:"0px",fontFamily:"sans-serif"}}>Noise isolation</h6> 
+     </div>         
+     </Col>
+     <Col lg={4} xs={5} className='d-flex justify-content-center align-items-center'>
+     <div>
+     <img src={img2} className="img-fluid " alt="Hero" /> 
+     </div>
      </Col>
      
+     
+     </div>
      </Row>
      
      </Container>
