@@ -46,7 +46,7 @@ header .navbar.sticky {
   header .nav-link {
     display: inline-flex;
     justify-content: center;
-    color: var(--white);
+    color: var(--white) !important;
     padding: 0 1rem !important;
     font-size: 1.222rem;
     font-weight: 450;
@@ -62,7 +62,7 @@ header .navbar.sticky {
     color: #f1e8e8;
   }
   header .nav-link:hover {
-    color: var(--yellow);
+    color: var(--yellow) !important;
   }
   header .cart {
     position: relative;

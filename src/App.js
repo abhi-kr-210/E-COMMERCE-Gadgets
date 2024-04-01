@@ -7,6 +7,8 @@ import SearchItems from "./Component/SearchItems";
 import Cart from "./Component/Cart";
 import Product from "./Component/Product";
 import Wishlist from "./Component/Wishlist";
+import Checkout from "./Component/Checkout";
+
 
 
 function App() {
@@ -32,6 +34,7 @@ function App() {
         <Route path="/cart" element={<Cart setcarts={setcarts} setcartnumber = {setcartnumber} carts={carts} cartnumber={cartnumber}/>} />
         <Route path="/product" element={<Product carts={carts} setcarts={setcarts} cartnumber={cartnumber} handlecartnumber={handlecartnumber} wish={wish} setwish={setwish} />} />
         <Route path="/wishlist" element={<Wishlist setwish={setwish} setcartnumber = {setcartnumber} wish={wish} cartnumber={cartnumber} carts={carts} setcarts={setcarts} handlecartnumber={handlecartnumber}/>} />
+        <Route path="/checkout" element={<Checkout cartnumber={cartnumber} carts={carts} />} />
       
     </Routes>
     </BrowserRouter>

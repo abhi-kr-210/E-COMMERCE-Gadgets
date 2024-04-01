@@ -53,7 +53,7 @@ function Cart({setcarts,setcartnumber,carts,cartnumber}) {
     </Container>
     {carts.length!==0&&(
      <div className='d-flex text-center justify-content-center' style={{marginBottom:"80px"}}>
-       <button className='btn btn-warning mx-3'>Check Out</button>
+       <Link to="/checkout" className='btn btn-warning mx-3'>Check Out</Link>
        <button onClick={handle_clear_cart} className='btn btn-danger'>Clear Cart</button>
      </div>
     
