@@ -5,11 +5,16 @@ import Header from './Layouts/Header'
 import { Link } from 'react-router-dom'
 
 function Cart({setcarts,setcartnumber,carts,cartnumber}) {
-  console.log(carts)
+  
   const handle_clear_cart=()=>{
     setcarts([]);
     setcartnumber(0);
   }
+  const removeItem = (indexToRemove) => {
+    const updatedItems = carts.filter((_, index) => index !== indexToRemove);
+    setcarts(updatedItems);
+    setcartnumber(cartnumber-1);
+  };
   return (
     <div className='Cart_page'>
     <Header cartnumber={cartnumber} />
@@ -29,21 +34,22 @@ function Cart({setcarts,setcartnumber,carts,cartnumber}) {
       <img src={cart.imgSrc} className="img-fluid" alt="Hero" />
       </div>
       </Col>
-      <Col lg={4} sm={5} xs={6}  xl={4}className='d-flex justify-content-center align-items-center column_2 '>
+      <Col lg={4} sm={5} xs={6}  xl={4} className='d-flex flex-column justify-content-center column_2 '>
       <div>
       <h4 className='text-center'>{cart.title}</h4>
       <h6 className='text-center' style={{textTransform:"none",fontFamily:"sans-serif"}}>{cart.description}</h6>
-      <div className="d-flex align-items-center justify-content-between">
-        <div className="menu_price btn btn-primary">
-        <h5 className="mb-1">{cart.price} {" ₹"}</h5>
-        </div>
-         <div className="btn btn-warning add_to_card">
-         <h5 className="mb-1">Buy Now</h5>
-       </div>
+
       </div>
+      <div className=" buttonbox_cart">
+      <div className="menu_price btn btn-primary cart_div">
+      <h6 className="mb-1">{cart.price} {" ₹"}</h6>
       </div>
+       <div className="btn btn-warning add_to_card" onClick={() => removeItem(index)}>
+       <h6 className="mb-1">Remove</h6>
+     </div>
+    </div>
       </Col>
-   
+      
     </Row>
       </div>
        ))

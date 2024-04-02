@@ -8,6 +8,7 @@ import Cart from "./Component/Cart";
 import Product from "./Component/Product";
 import Wishlist from "./Component/Wishlist";
 import Checkout from "./Component/Checkout";
+import Contactpage from "./Pages/Homes/Contactpage";
 
 
 
@@ -35,7 +36,7 @@ function App() {
         <Route path="/product" element={<Product carts={carts} setcarts={setcarts} cartnumber={cartnumber} handlecartnumber={handlecartnumber} wish={wish} setwish={setwish} />} />
         <Route path="/wishlist" element={<Wishlist setwish={setwish} setcartnumber = {setcartnumber} wish={wish} cartnumber={cartnumber} carts={carts} setcarts={setcarts} handlecartnumber={handlecartnumber}/>} />
         <Route path="/checkout" element={<Checkout cartnumber={cartnumber} carts={carts} />} />
-      
+        <Route path="/contact" element={<Contactpage cartnumber={cartnumber} />} />
     </Routes>
     </BrowserRouter>
   );

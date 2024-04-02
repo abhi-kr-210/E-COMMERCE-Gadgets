@@ -54,8 +54,8 @@ const handlesubmit=(e)=>{
 
         <Nav className="ms-auto mt-3" >
           <Nav.Link as={Link} to="/" >HOME</Nav.Link>    
-          <Nav.Link as={Link} to="/">SHOP</Nav.Link>         
-          <Nav.Link as={Link} to="/">CONTACT</Nav.Link>
+                 
+          <Nav.Link as={Link} to="/contact">CONTACT</Nav.Link>
           <Nav.Link as={Link} >
           <Link to="/wishlist"  className="cart mt-1 ">
           <i className="bi bi-heart" />

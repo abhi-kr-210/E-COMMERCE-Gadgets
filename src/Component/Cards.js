@@ -83,7 +83,7 @@ function Cards({id,title,imgSrc,description,price,handlecartnumber,carts,setcart
         <div className="d-flex align-items-center justify-content-between mb-3">
         <div className="item_rating">{renderRatingIcons(rating)}</div>
         <div onClick={handlewishlist} style={{color:"white"}} >            
-          {wishlistcolor ? (<i className="bi bi-heart-fill" style={{color:"red",cursor:"pointer",fontSize:"1.5rem"}}></i> ): <i className="bi bi-heart"  style={{cursor:"pointer",fontSize:"1.5rem"}}></i>}
+          {wishlistcolor ? (<i className="bi bi-heart-fill " style={{color:"red",cursor:"pointer",fontSize:"1.5rem"}} ></i> ): <i className="bi bi-heart"  style={{cursor:"pointer",fontSize:"1.5rem"}}></i>}
         </div>
       </div>
         <Card.Text>{}</Card.Text>

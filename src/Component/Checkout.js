@@ -21,6 +21,10 @@ const handletotal=(price,quantity)=>{
   grandtotal=grandtotal+total;
   return total;
 }
+const handlesubmit=(e)=>{
+  e.preventDefault();
+  
+}
   return (
     <div>
     <Header cartnumber={cartnumber} />
@@ -30,10 +34,10 @@ const handletotal=(price,quantity)=>{
     <Row >
     <Col lg={6} className='mb-5 '>
     <div className='checkout_page_form_container checkout_column1'>
-    <div style={{backgroundColor:"#e6e6e6c4",color:"#304635",padding:"6px"}} className='align-items-center'>
+    <div style={{backgroundColor:"#e6e6e6c4",color:"rgb(74 40 0)",padding:"6px"}} className='align-items-center'>
     <h4 style={{fontWeight:500}}>Basic Information</h4>
     </div>
-    <form className='mt-3'>
+    <form onSubmit={handlesubmit} className='mt-3'>
       <div className='d-flex justify-content-between mb-2 checkout_input'>
       <div>
       <label htmlFor="fname">First Name</label>
@@ -98,7 +102,7 @@ const handletotal=(price,quantity)=>{
      </div>
      <div className='d-flex justify-content-end align-items-center mt-3'>
      
-     <button className='btn btn-primary' style={{fontWeight:400,backgroundColor:"#304635",borderColor:"#304635"}}>Place Order</button>
+     <button className='btn btn-primary' style={{fontWeight:400,backgroundColor:"rgb(80 133 19)",borderColor:"rgb(80 133 19)"}}>Place Order</button>
      </div>
     </form>
     </div>    
@@ -135,12 +139,8 @@ const handletotal=(price,quantity)=>{
       </div>
     </Col>   
     </Row>   
-    </Container>
-    
-    </div>
-    
-    
-    
+    </Container>   
+    </div>    
     </div>
   )
 }

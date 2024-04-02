@@ -8,36 +8,38 @@
     padding: 10px;
 }
 .checkout_page{
-    background-image:url(../assets/checkout_img.jpg); 
+    background-image:url(../assets/checkout_img1.jpg); 
     background-repeat: no-repeat;
     background-position: center center;
 
     background-size: cover;
     min-height: 100vh;
-    color:rgb(24, 31, 25);
+    color:#e2d0a3;
     font-weight: 500;
 }
 .checkout_column1{
-    background-image:url(../assets/checkout_box.jpg); 
+   /* background-image:url(../assets/checkout_box.jpg); 
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: cover;
+    background-size: cover;*/
+    /* Fallback color */
+    background-image: linear-gradient(to bottom, rgb(72 53 34), rgb(10 83 143 / 23%)); /* Gradient */
     border:2px solid white;
     border-radius:10px ;
 }
 .checkout_page .checkout_input input {
-    background-color: #c1cbc7;
+    background-color: #c1cbc721;
     color: black;
-    border:none;
+    border:1px solid white;
 }
 .checkout_page textarea{
-    background-color: #c1cbc7;
+    background-color: #c1cbc721;
     color: black;
 }
 .checkout_page .zip input{
-    background-color: #c1cbc7;
+    background-color: #c1cbc721;
     color: black;
-    border:none;
+    border:1px solid white;
 }
 @media (max-width:400px){
     .checkout_page_form_container .checkout_input input{

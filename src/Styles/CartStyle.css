@@ -32,6 +32,15 @@
     border-bottom-left-radius:0px;
 
 }
+.buttonbox_cart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.buttonbox_cart .cart_div{
+    margin-left: 8px;
+    margin-right: 8px;
+}
 @media (max-width:992px){
     .Cart_page .row{
       max-height: 100%; 
@@ -46,5 +55,16 @@
     }
     .Cart_container .column_2{
         padding:8px;
+    }
+
+}
+@media (max-width:400px){
+    .buttonbox_cart{
+        display: flex;
+        justify-content: space-between;
+    }
+    .buttonbox_cart .cart_div{
+        margin-left: 0px;
+        margin-right: 0px;
     }
 }

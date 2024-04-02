@@ -62,19 +62,19 @@ function Wishlist({setwish,setcartnumber,wish,cartnumber,carts,setcarts,handleca
       <img src={cart.imgSrc} className="img-fluid" alt="Hero" />
       </div>
       </Col>
-      <Col lg={4} sm={5} xs={6}  xl={4}className='d-flex justify-content-center align-items-center column_2 '>
+      <Col lg={4} sm={5} xs={6}  xl={4}className='d-flex flex-column justify-content-center column_2 '>
       <div>
       <h4 className='text-center '>{cart.title}</h4>
       <h6 className='text-center' style={{textTransform:"none",fontFamily:"sans-serif"}}>{cart.description}</h6>
-      <div className="d-flex align-items-center justify-content-between">
-        <div className="menu_price btn btn-primary">
-        <h5 className="mb-1 wishlisttext">{cart.price} {" ₹"}</h5>
-        </div>
-         <div onClick={()=>handlecartid_and_handlecartnumber(cart.id) } className="btn btn-warning add_to_card">
-         <h5 className="mb-1 wishlisttext">Add To Cart</h5>
-       </div>
       </div>
+      <div className="buttonbox_wishlist">
+      <div className="menu_price btn btn-primary wishlist_div">
+      <h6 className="mb-1 wishlisttext">{cart.price} {" ₹"}</h6>
       </div>
+       <div onClick={()=>handlecartid_and_handlecartnumber(cart.id) } className="btn btn-warning add_to_card">
+       <h6 className="mb-1 wishlisttext">Add To Cart</h6>
+     </div>
+    </div>
       </Col>
    
     </Row>
@@ -86,7 +86,7 @@ function Wishlist({setwish,setcartnumber,wish,cartnumber,carts,setcarts,handleca
     </Container>
     {wish.length!==0&&(
      <div className='d-flex text-center justify-content-center' style={{marginBottom:"80px"}}>
-       <button className='btn btn-warning mx-3'>Check Out</button>
+       {/*<button className='btn btn-warning mx-3'>Check Out</button>*/}
        <button onClick={handle_clear_wishlist} className='btn btn-danger'>Clear Wishlist</button>
      </div>
     

@@ -1,0 +1,59 @@
+.contactus_page .container{
+    position: relative;
+    padding-top:130px;
+    padding-bottom: 27px;
+
+}
+
+.contactus_page h2{
+    color:white;
+}
+.contactus_page_column{
+    background: linear-gradient(166deg, rgb(138 18 159 / 97%) 0%, rgb(180 180 180 / 0%) 100%), #220b76;
+    border:2px solid white;
+    border-radius: 6px;
+    padding: 17px;
+    margin-bottom: 20px;
+}
+.contactus_page .input_box{
+    border-bottom: 1px solid #ffffff96;
+
+}
+.contactus_page label{
+    color:#ffffffa8!important;
+    font-size: 1.1rem;
+
+}
+.contactus_page .input_box input{
+    border:none;
+    background-color: rgba(240, 248, 255, 0);
+    min-width: 100%;
+    color: white !important;
+    
+}
+.contactus_page .input_box input:focus{
+   outline:none;
+    
+}
+.contactus_page .input_box textarea{
+    border:none;
+    background-color: rgba(240, 248, 255, 0);
+    color:white;
+    min-height: 112px;
+}
+.contactus_page .input_box textarea:focus{
+    outline:none;
+}
+.contactus_page .icon{
+    border:1px solid #0000005e;
+    margin-right: 26px;
+    width: 49px;
+    height: 48px;
+    border-radius: 24px;
+}
+.icon_container{
+    margin-bottom: 30px;
+}
+.icon_container1{
+    margin-top: 30px;
+}
