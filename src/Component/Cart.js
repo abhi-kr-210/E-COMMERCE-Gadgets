@@ -3,7 +3,7 @@ import { Container, Row,Col } from 'react-bootstrap'
 import "../Styles/CartStyle.css"
 import Header from './Layouts/Header'
 import { Link } from 'react-router-dom'
-
+import empty_cart from "../assets/empty_cart.png"
 function Cart({setcarts,setcartnumber,carts,cartnumber}) {
   
   const handle_clear_cart=()=>{
@@ -21,7 +21,11 @@ function Cart({setcarts,setcartnumber,carts,cartnumber}) {
     <Container className='Cart_box '>
     {carts.length===0?
     ( <div className='text-center'>
-    <h1 style={{textTransform:"none"}}>Your Cart is Empty</h1>
+    <div>
+    <img src={empty_cart} className="img-fluid" alt="Hero" />
+    </div>
+    <h3 style={{textTransform:"none"}}>Hey ! Your Cart is Empty</h3>
+    <h6 style={{textTransform:"none",color:"#00000085"}}>Add Some items to your cart</h6>
     <Link to="/" className='btn btn-warning'><h4 style={{textTransform:"none",fontWeight:400}}>Continue Shopping...</h4></Link>
     </div>):
     carts.map((cart,index)=>(

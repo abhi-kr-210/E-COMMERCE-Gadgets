@@ -29,18 +29,31 @@
 }
 .checkout_page .checkout_input input {
     background-color: #c1cbc721;
-    color: black;
+    color: rgb(255, 255, 255);
     border:1px solid white;
 }
+.checkout_page .checkout_input input:focus{
+    outline:none;
+     
+ }
 .checkout_page textarea{
     background-color: #c1cbc721;
-    color: black;
+    color: rgb(255, 255, 255);
+    min-height: 112px;
+}
+.checkout_page textarea:focus{
+    outline:none;
 }
 .checkout_page .zip input{
     background-color: #c1cbc721;
-    color: black;
+    color: rgb(255, 255, 255);
     border:1px solid white;
 }
+.checkout_page .zip input:focus{
+    outline:none;
+     
+ }
+
 @media (max-width:400px){
     .checkout_page_form_container .checkout_input input{
         width:90% !important;

@@ -1,0 +1,12 @@
+.product_pages .container{
+    position: relative;
+    padding-top:130px;
+    padding-bottom: 27px;
+
+}
+@media (max-width:575.8px){
+    .product_page_row {
+       
+        justify-content:center;
+    }
+ }

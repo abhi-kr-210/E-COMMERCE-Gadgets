@@ -91,7 +91,7 @@
   display: flex;
 }
 .sliding_effect a:hover{
-  animation: wave 0.7s ease infinite alternate;
+  animation: wave 0.7s ease  alternate;
 }
 @keyframes wave {
   0% {

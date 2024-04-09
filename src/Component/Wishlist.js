@@ -8,6 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { Bounce } from 'react-toastify';
 import items from '../Pages/Homes/Data'
  import "../Styles/WishlistStyle.css"
+ import emptywishlist from "../assets/emptywishlist.png"
 function Wishlist({setwish,setcartnumber,wish,cartnumber,carts,setcarts,handlecartnumber}) {
     const handle_clear_wishlist=()=>{
         setwish([]);
@@ -49,7 +50,10 @@ function Wishlist({setwish,setcartnumber,wish,cartnumber,carts,setcarts,handleca
     <Container className='Cart_box '>
     {wish.length===0?
     ( <div className='text-center'>
-    <h1 style={{textTransform:"none"}}>Your Wishlist is Empty</h1>
+    <div>
+    <img src={emptywishlist} className="img-fluid" alt="Hero" />
+    </div>
+    <h3 style={{textTransform:"none"}}>Your Wishlist is Empty</h3>
     <Link to="/" className='btn btn-warning'><h4 style={{textTransform:"none",fontWeight:400}}>Continue Shopping...</h4></Link>
     </div>):
     wish.map((cart,index)=>(

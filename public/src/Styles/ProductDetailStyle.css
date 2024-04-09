@@ -1,0 +1,17 @@
+.details{
+    position: relative;
+    padding-top:96px;
+    padding-bottom: 27px;
+    
+}
+.details .container{
+    margin-left:0px!important;
+    
+}
+.details .img-fluid {
+    max-height: 530px !important;
+}
+.navbar{
+    background-color: #000000dd!important;
+    color: white !important;
+}

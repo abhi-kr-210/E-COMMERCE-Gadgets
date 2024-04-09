@@ -53,8 +53,7 @@ const handlesubmit=(e)=>{
       <Navbar.Collapse id="responsive-navbar-nav">
 
         <Nav className="ms-auto mt-3" >
-          <Nav.Link as={Link} to="/" >HOME</Nav.Link>    
-                 
+          <Nav.Link as={Link} to="/" >HOME</Nav.Link>       
           <Nav.Link as={Link} to="/contact">CONTACT</Nav.Link>
           <Nav.Link as={Link} >
           <Link to="/wishlist"  className="cart mt-1 ">

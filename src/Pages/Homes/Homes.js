@@ -8,7 +8,7 @@ import "../../Styles/HeaderStyle.css"
 function Homes({carts, setcarts ,cartnumber,handlecartnumber,wish, setwish,wishlistcolor,setwishlistcolor}) {
   
   return (
-    <div>
+    <div className='home_page_fade_animation'>
      <Layout cartnumber={cartnumber}>
      {/*section1 hero banner*/ }
     <Section1/>

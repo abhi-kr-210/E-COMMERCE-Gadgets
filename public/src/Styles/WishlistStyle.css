@@ -1,0 +1,27 @@
+
+.buttonbox_wishlist{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.buttonbox_wishlist .wishlist_div{
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+@media(max-width:400px){
+    .buttonbox_wishlist{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .buttonbox_wishlist .wishlist_div{
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+}
+@media(max-width:370px){
+    .wishlisttext {
+        font-size: 0.93rem!important;
+    }
+}

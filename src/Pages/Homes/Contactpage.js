@@ -53,7 +53,7 @@ function Contactpage({cartnumber }) {
     </form>
      
      </Col>   
-     <Col lg={6} className='d-flex align-items-center justify-content-center contactus_page_column2' >
+     <Col lg={6}  className='d-flex align-items-center justify-content-center contactus_page_column2' >
        <div>
        
        <div>
