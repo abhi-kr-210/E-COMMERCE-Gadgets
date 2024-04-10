@@ -9,7 +9,7 @@ import Product from "./Component/Product";
 import Wishlist from "./Component/Wishlist";
 import Checkout from "./Component/Checkout";
 import Contactpage from "./Pages/Homes/Contactpage";
-import Main_page from "./Pages/Homes/Main_page";
+import Mainpage from "./Pages/Homes/Mainpage";
 
 
 
@@ -20,7 +20,7 @@ function App() {
     // Simulate loading time with setTimeout
     const timeout = setTimeout(() => {
       setIsLoading(false);
-    }, 2000); // Adjust the delay time as needed
+    }, 3000); // Adjust the delay time as needed
 
     return () => clearTimeout(timeout);
   }, []);
@@ -38,7 +38,7 @@ function App() {
     
     <BrowserRouter>
       {isLoading ? (
-        <Main_page />):(
+        <Mainpage />):(
 
           <Routes>  
           <Route path="/" element={<Homes  carts={carts} setcarts={setcarts} cartnumber={cartnumber} handlecartnumber={handlecartnumber} wish={wish} setwish={setwish} />} />  
